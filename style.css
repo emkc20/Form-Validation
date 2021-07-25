@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(53.26% 57.89% at 50.65% 50.28%, rgb(110 189 110) 0, #47de98 164%);
+}
+
+form {
+    padding: 20px;
+    border: 2px solid rgb(7 62 7 / 31%);
+    border-radius: 5px;
+    color: white;
+}
+
+form>h1 {
+    border-bottom: 2px solid rgb(7 62 7 / 31%);
+    padding-bottom: 10px;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.form-body>div {
+    margin-top: 10px;
+}
+
+.form-body div label {
+    padding-left: 10px;
+    color: white;
+    display: block;
+}
+
+form>div>div:nth-child(4) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+}
+
+form>div>div:nth-child(5) button {
+    background-color: rgb(8 142 8 / 43%);
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+form>div>div:nth-child(6) button:hover {
+    background-color: rgb(4, 146, 4);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    outline: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+}
+
+::placeholder {
+    font-size: 14px;
+    color: gray;
+}
+
+.form-part span {
+    color: #d1594c;
+    visibility: hidden;
+}
+
+.form-part.error span {
+    visibility: visible;
+}
+
+.form-part.succes .fa-check-circle {
+    color: #26a75b;
+    visibility: visible;
+    font-size: 16px;
+}
+
+.form-part.error .fa-exclamation-circle {
+    color: #d1594c;
+    visibility: visible;
+    font-size: 16px;
+}
+
+.form-part i {
+    position: relative;
+    left: 248px;
+    bottom: 38px;
+    visibility: hidden;
+}
+
+.form-part.succes input {
+    border-color: #26a75b;
+}
+
+.form-part.error input {
+    border: 3px solid #d1594c;
+}
+
+.cursor {
+    position: fixed;
+    width: 37px;
+    height: 37px;
+    border: 1px solid rgb(0 76 0 / 57%);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+}
+
+.cursor2 {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background-color: rgb(1 84 1);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .15s;
+}
+
+.form-part:hover .cursor {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: #c6c6c6;
+    opacity: .5;
+}
+
+button:hover .cursor2 {
+    opacity: 0;
+}

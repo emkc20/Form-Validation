@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <form action="POST" id="form1" novalidate>
+        <h1>FORM VALIDATION</h1>
+        <div class="form-body">
+            <div class="form-part">
+                <label for="userName">Kullanıcı Adı</label>
+                <input id="userName" type="text" placeholder="Kullanıcı Adı" required>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <span></span>
+            </div>
+            <div class="form-part">
+                <label for="password">Parola</label>
+                <input id="password" type="password" placeholder="Şifre" required>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <span>Lütfen bu alanı doldurun</span>
+            </div>
+            <div class="form-part">
+                <label for="email">E-Mail</label>
+                <input id="email" type="email" placeholder="E-mail" name="email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <span>Lütfen bu alanı doldurun</span>
+            </div>
+            <div class="form-part">
+                <input id="checkbox" type="checkbox" required style="width: 25px; height: 25px;">
+                <span style="margin-left: 15px;">Lütfen bu alanı doldurun</span>
+            </div>
+            <div>
+                <button>Gönder</button>
+            </div>
+        </div>
+<div class="cursor"></div>
+  <div class="cursor2"></div>
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>
